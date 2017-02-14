@@ -1,25 +1,22 @@
-
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <!-- TemplateBeginEditable name="doctitle" -->
-<title>decam</title>
+<title>Untitled Document</title>
 <!-- TemplateEndEditable -->
 <!-- TemplateBeginEditable name="head" -->
 <!-- TemplateEndEditable -->
 <style type="text/css">
 <!--
 body {
-	background-color: #990000;
+	background-color: #42413C;
 	margin: 0;
 	padding: 0;
-	color: #FFF;
+	color: #000;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 100%;
-	line-height: 1;
+	line-height: 1.3;
 }
 
 /* ~~ Element/tag selectors ~~ */
@@ -35,33 +32,29 @@ h1, h2, h3, h4, h5, h6, p {
 a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
 	border: none;
 }
-
 /* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
 a:link {
-	color: #FFFFFF;
+	color: #42413C;
 	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
 }
 a:visited {
-	color: #4E5869;
+	color: #6E6C64;
 	text-decoration: underline;
 }
 a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
 	text-decoration: none;
-	font-family: Arial, Helvetica, sans-serif;
 }
 
-/* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
+/* ~~ this fixed width container surrounds the other divs ~~ */
 .container {
-	width: 80%;
-	max-width: 1260px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
-	min-width: 780px;/* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
+	width: 960px;
 	background-color: #FFF;
-	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
 }
 
-/* ~~the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo~~ */
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
 .header {
-	background-color: #990000;
+	background-color: #ADB96E;
 }
 
 /* ~~ This is the layout information. ~~ 
@@ -69,20 +62,16 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
 
 */
-.content {
-	padding: 10px 0;
-	color: #000;
-}
 
-/* ~~ This grouped selector gives the lists in the .content area space ~~ */
-.content ul, .content ol { 
-	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+.content {
+
+	padding: 10px 0;
 }
 
 /* ~~ The footer ~~ */
 .footer {
 	padding: 10px 0;
-	background-color: #990000;
+	background-color: #CCC49F;
 }
 
 /* ~~ miscellaneous float/clear classes ~~ */
@@ -104,44 +93,28 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 </style></head>
 
 <body>
-<!-- TemplateBeginEditable name="EditRegion3" -->
+
 <div class="container">
   <div class="header">
-    <blockquote>
-      <blockquote>
-        <blockquote>
-          <h2 align="center" class="header"><strong>Formal Analysis of Galois Feild Arithmetics</strong><strong></strong></h2>
-          <p align="center">- Parallel Verification and Reverse Engineering</p>
-          <p align="center"><strong>ECE Department, University of Massachusetts, Amherst</strong></p>
-          <p align="center"><strong>Cunxi Yu and Maciej Ciesielski</strong></p>
-        </blockquote>
-      </blockquote>
-    </blockquote>
-  </div>
+    <h1 align="center">Formal Analysis of Galois Feild Arithmetics</h1>
+    <h2 align="center">- Parallel Verification and Reverse Engineering    </h2>
+    <h3 align="center"><a href="http://people.umass.edu/ycunxi/">Cunxi Yu</a> and <a href="http://www.ecs.umass.edu/ece/labs/vlsicad/ciesielski.html">Maciej Ciesielski</a></h3> 
+    <!-- end .header --></div>
   <div class="content">
-    <h2>Abstract</h2>
+    <h1>&nbsp;</h1>
+    <h1>Abstract</h1>
     <p>Galois field (GF) arithmetic finds numerous applications in communication and security-related hardware, and formal verification of GF arithmetic circuits is of prime importance. Current techniques for formally verifying such circuits are based on computer algebra methods that proved successful in verifying integer and GF arithmetic circuits. However, the methods are limited to designs with known bit position of the primary inputs and outputs. In addition, the methods for Galois field arithmetic circuits require the knowledge of the irreducible polynomial P(x), that affects the function and performance of the arithmetic implementation in GF(2m). This paper presents a computer algebra based technique that reverse engineers GF(2m) multipliers directly from the gate-level netlist of the design. The approach is based on first extracting a unique polynomial in Galois field of each output element independently. Then, it processes in three steps: 1) determine the bit position of the output bits, 2) determine the bit position of the input bits, and 3) extract the irreducible polynomial used in the design. We demonstrate that this method is able to reverse engineer the GF(2m) multipliers in m threads. Experiments were performed on bit-blasted Mastrovito and Montgomery multipliers with different P (x), including NIST-recommended polynomials and optimal polynomials for different microprocessor architectures.</p>
-    <p align="center"><img src="file:///Macintosh HD/Users/cunxiyu/Desktop/fig1.png" width="600" height="320" /></p>
-    <p align="center"><img src="file:///Macintosh HD/Users/cunxiyu/Desktop/fig2.png" width="450" height="300" /></p>
-    <p>&nbsp;</p>
-    <h2>Publications</h2>
-    <ul>
-      <li><em>Efficient Parallel Verification of Galois Feild Multipliers.</em><br />
-        Cunxi Yu and Maciej Ciesielski<br />
-        IEEE/ACM 22nd Asia and South Pacific Design Automation Conference (ASP-DAC'17), Jan. 16-19, Chiba/Tokyo, Japan.<br />
-      </li></ul>
+    <h2 align="center"><img src="fig1.png" width="744" height="376" /></h2>
+    <h2>References:</h2>
+    <p><em>[1] Efficient Parallel Verification of Galois Feild Multipliers.</em> (<strong>Best paper nomination</strong>)<br />
+      Cunxi Yu and Maciej Ciesielski<br />
+    IEEE/ACM 22nd Asia and South Pacific Design Automation Conference (ASP-DAC'17), Jan. 16-19, Chiba/Tokyo, Japan.</p>
+    <h2>&nbsp;</h2>
     <h2>Tool</h2>
-    <p><strong>Our tool is implemented using c++ and tested on Ubuntu system    </strong></p>
-    <ul>
-      <li><strong>Download binary files.[Click]</strong></li>
-      <li><strong>Download samples.[Click]</strong></li>
-      <li><strong>Usage: ./gen_irreducible_poly file.eqn #bitwidth #threads
-        </strong>
-        <ul>
-          <li><strong>e.g. ./gen_irreducible_poly Mas64.eqn 64 10 (see log file bellow)</strong></li>
-        </ul>
-      </li>
-    </ul>
+    <p>The tool is implemented in C++(g++4.9) and tested on Ubuntu System.</p>
+    <h3>	Download the tool and examples. </h3>
+    <p>Usage: ./gen_irreducible_poly file.eqn #bitwidth #threads<br />
+    e.g. ./gen_irreducible_poly Mas64.eqn 64 10 (see log file bellow)</p>
     <p><em>cunxi@xxx:~$ ./gen_irreducible_poly Mas64.eqn 64 20<br />
       USAGE: ./gen_eqns somefile.eqn (int)bits (int)threads<br />
     Number of results: 64</em></p>
@@ -149,21 +122,20 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
     <p><em>Successfully reverse engineer P(x) in this GF design<br />
       [1] ---------- This is a Galois Feild 64-bit (GF(2^64) multiplication) implemented by P(x) showing bellow ---------</em></p>
     <p><em>[2] ---------- Irreducible polynomial P(x): x^64+x^21+x^19+x^4+1</em></p>
-    <p><em>[3] ---------  Z[63:0] = (A[63:0] X B[63:0]) mod x^64+x^21+x^19+x^4+1</em></p>
-    <p><em>*** Report ends here  ******(contact: ycunxi@umass.edu)</em></p>
+    <p><em>[3] --------- Z[63:0] = (A[63:0] X B[63:0]) mod x^64+x^21+x^19+x^4+1</em></p>
+    <p><em>*** Report ends here ******(contact: ycunxi@umass.edu)</em></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
     <h3>&nbsp;</h3>
-    <p align="right"><!-- end .content -->  
-    <img src="umass-amherst.png" width="154" height="151" /></p>
-  </div>
+  <!-- end .content --></div>
   <div class="footer">
-    <blockquote>
-      <p>Last update: Feb 6, 2017.         Copyright 2016 University of Massachusetts Amherst Website by Cunxi.</p>
-    </blockquote>
-  </div>
-</div>
-<!-- TemplateEndEditable -->
+    <p>Contact: ycunxi@umass.edu Cunxi Yu </p>
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
 </body>
 </html>
-
-
 
