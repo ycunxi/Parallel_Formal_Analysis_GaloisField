@@ -19,7 +19,7 @@ body {
 	color: #FFF;
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 100%;
-	line-height: 1;
+	line-height: 1.3;
 }
 
 /* ~~ Element/tag selectors ~~ */
@@ -110,10 +110,10 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
     <blockquote>
       <blockquote>
         <blockquote>
-          <h2 align="center" class="header"><strong>Formal Analysis of Galois Feild Arithmetics</strong><strong></strong></h2>
-          <p align="center">- Parallel Verification and Reverse Engineering</p>
-          <p align="center"><strong>ECE Department, University of Massachusetts, Amherst</strong></p>
-          <p align="center"><strong>Cunxi Yu and Maciej Ciesielski</strong></p>
+          <h1 align="center" class="header"><strong>Formal Analysis of Galois Feild Arithmetics</strong><strong></strong></h1>
+          <h2 align="center">- Parallel Verification and Reverse Engineering</h2>
+          <h4 align="center"><strong>ECE Department, University of Massachusetts, Amherst</strong></h4>
+          <h4 align="center"><strong>Cunxi Yu and Maciej Ciesielski</strong></h4>
         </blockquote>
       </blockquote>
     </blockquote>
