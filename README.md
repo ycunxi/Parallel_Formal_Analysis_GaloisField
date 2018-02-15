@@ -2,9 +2,9 @@
 **. Formal Analysis of Galois Field Arithmetic Circuits - Verification and Reverse Engineering **
 
 
-Tool and examples are in /tool_examples.
+# Tool and examples are in /tool_examples.
 
-Example:
+## Example:
 Usage: ./gen_irreducible_poly file.eqn #bitwidth #threads
 e.g. ./gen_irreducible_poly Mas64.eqn 64 10 (see log file bellow)
 
@@ -21,6 +21,7 @@ Successfully reverse engineer P(x) in this GF design
 
 [3] --------- Z[63:0] = (A[63:0] X B[63:0]) mod x^64+x^21+x^19+x^4+1
 
+# Results
 
 Verification results: printed into xxx.eqn_result (e.g., Mas64.eqn_result).
   The polynomial expression of eafh output bit (or each output bit function) are written in this file.
@@ -31,6 +32,7 @@ Reverse eng results: printed in the terminal.
 
 https://ycunxi.github.io/Parallel_Formal_Analysis_GaloisField/
 
+# References
 
 [1] Efficient Parallel Verification of Galois Feild Multipliers. (Best Paper Nomination)
 Cunxi Yu and Maciej Ciesielski
