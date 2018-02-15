@@ -18,7 +18,6 @@ body {
 	font-size: 100%;
 	line-height: 1.3;
 }
-
 /* ~~ Element/tag selectors ~~ */
 ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
 	padding: 0;
@@ -44,36 +43,27 @@ a:visited {
 a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
 	text-decoration: none;
 }
-
 /* ~~ this fixed width container surrounds the other divs ~~ */
 .container {
 	width: 960px;
 	background-color: #FFF;
 	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
 }
-
 /* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
 .header {
 	background-color: #ADB96E;
 }
-
 /* ~~ This is the layout information. ~~ 
-
 1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
-
 */
-
 .content {
-
 	padding: 10px 0;
 }
-
 /* ~~ The footer ~~ */
 .footer {
 	padding: 10px 0;
 	background-color: #CCC49F;
 }
-
 /* ~~ miscellaneous float/clear classes ~~ */
 .fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
 	float: right;
@@ -91,9 +81,7 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 }
 -->
 </style></head>
-
 <body>
-
 <div class="container">
   <div class="header">
     <h1 align="center">Formal Analysis of Galois Feild Arithmetics</h1>
@@ -109,20 +97,19 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
     <p><em>[1] Efficient Parallel Verification of Galois Feild Multipliers.</em> (<strong>Best paper nomination</strong>)<br />
       Cunxi Yu and Maciej Ciesielski<br />
     IEEE/ACM 22nd Asia and South Pacific Design Automation Conference (ASP-DAC'17), Jan. 16-19, Chiba/Tokyo, Japan.</p>
+    
+        <p><em>[2] Formal Analysis of Galois Field Arithmetic - Parallel Verification and Reverse Engineering.</em> <br />
+      Cunxi Yu and Maciej Ciesielski<br />
+    IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems. (TCAD'18) </p>
+    
     <h2>&nbsp;</h2>
     <h2>Tool</h2>
     <p>The tool is implemented in C++(g++4.9) and tested on Ubuntu System.</p>
     <h3>	Download the tool and examples (<a href="https://github.com/ycunxi/Parallel_Formal_Analysis_GaloisField/blob/master/tool_example.tar.gz">tar.gz</a>) (<a href="https://github.com/ycunxi/Parallel_Formal_Analysis_GaloisField/tree/master/tool_example">check online</a>)</h3>
-    <p>Usage: ./gen_irreducible_poly file.eqn #bitwidth #threads<br />
-    e.g. ./gen_irreducible_poly Mas64.eqn 64 10 (see log file bellow)</p>
-    <p><em>cunxi@xxx:~$ ./gen_irreducible_poly Mas64.eqn 64 20<br />
-      USAGE: ./gen_eqns somefile.eqn (int)bits (int)threads<br />
-    Number of results: 64</em></p>
-    <p><em>*** Report starts here ***** (Developed by Cunxi Yu at UMass Amherst. Last modified by Nov. 20 2016)</em></p>
-    <p><em>Successfully reverse engineer P(x) in this GF design<br />
-      [1] ---------- This is a Galois Feild 64-bit (GF(2^64) multiplication) implemented by P(x) showing bellow ---------</em></p>
-    <p><em>[2] ---------- Irreducible polynomial P(x): x^64+x^21+x^19+x^4+1</em></p>
-    <p><em>[3] --------- Z[63:0] = (A[63:0] X B[63:0]) mod x^64+x^21+x^19+x^4+1</em></p>
+   Please check README on github<a href=" https://github.com/ycunxi/Parallel_Formal_Analysis_GaloisField">.
+ </p>
+     https://github.com/ycunxi/Parallel_Formal_Analysis_GaloisField
+    
     <p><em>*** Report ends here ******(contact: ycunxi@umass.edu)</em></p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
